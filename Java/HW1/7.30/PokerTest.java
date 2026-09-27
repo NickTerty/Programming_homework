@@ -71,13 +71,14 @@ public class PokerTest {
         
         // Give five decks
         Card[] hand = myDeck.dealHand();
-        
+        int handScore = evaluateHand(hand, myDeck);
+
         // print
         System.out.println("--- Your hand ---");
         for(Card card : hand) {
         	System.out.println(card);
         }
         System.out.println("-----------------");
-        printHand(hand, myDeck);
+        printHand(hand, handScore);
     }
 }
