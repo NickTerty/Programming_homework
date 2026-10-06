@@ -1,0 +1,73 @@
+package rpgGame;
+
+public class Warrior {
+	private String name;
+	private int life;
+	private int magic;
+	
+	public Warrior() {
+		this.name = null;
+		this.life = 0;
+		this.magic = 0;
+	}
+	
+	public Warrior(String name, int life, int magic){
+		this.name = name;
+		this.life = life;
+		this.magic = magic;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public void setLife(int life) {
+		this.life = life;
+	}
+	
+	public int getLife() {
+		return this.life;
+	}
+	
+	public void setMagic(int magic) {
+		this.magic = magic;
+	}
+	
+	public int getMagic() {
+		return this.magic;
+	}
+	
+	public void NewMoon(Warrior warrior) {
+		if(this.magic >= 10) {
+			warrior.setLife(warrior.getLife() - 25);		
+			this.magic -= 10;
+			
+			if(warrior.getLife() < 0) {
+				System.out.println(warrior.getName() + " was killed by " + this.getName());
+				System.exit(0);
+			}
+		}
+		else {
+			System.out.println(this.getName() + " doesn't have enough magic!");
+		}
+	}
+	
+	public void NewMoon(Witch witch) {
+		if(this.magic >= 10) {
+			witch.setLife(witch.getLife() - 40);
+			this.magic -= 10;
+			
+			if(witch.getLife() < 0) {
+				System.out.println(witch.getName() + " was killed by " + this.getName());
+				System.exit(0);
+			}
+		}
+		else {
+			System.out.println(this.getName() + " doesn't have enough magic!");
+		}
+	}
+}
