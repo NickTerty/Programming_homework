@@ -6,7 +6,7 @@ public class Game {
 	public static final int WARRIOR_MANA = 100;
 	
 	public static final int WITCH_HP = 280;
-	public static final int WITCH_MANA = 280;
+	public static final int WITCH_MANA = 200;
 	
 	public static final int CHARACTER_CNT = 3;
 	
