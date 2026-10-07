@@ -1,6 +1,10 @@
 package rpgGame;
 
 public class Witch {
+	private static final int MANA_REDUCT = 25;
+	private static final int WARRIOR_LOSE_HP = 40;
+	private static final int WITCH_LOSE_HP = 60;
+
 	private String name;
 	private int life;
 	private int magic;
@@ -11,10 +15,14 @@ public class Witch {
 		this.magic = 0;
 	}
 	
-	public Witch(String name, int life, int magic){
+	public Witch(String name, int life, int magic) {
 		this.name = name;
 		this.life = life;
 		this.magic = magic;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	public String getName() {
@@ -38,9 +46,9 @@ public class Witch {
 	}
 	
 	public void SmallFire(Warrior warrior) {
-		if(this.magic >= 25) {
-			warrior.setLife(warrior.getLife() - 40);;			
-			this.magic -= 25;
+		if(this.magic >= MANA_REDUCT) {
+			warrior.setLife(warrior.getLife() - WARRIOR_LOSE_HP);;			
+			this.magic -= MANA_REDUCT;
 			
 			if(warrior.getLife() < 0) {
 				System.out.println(warrior.getName() + " was killed by " + this.getName());
@@ -53,9 +61,9 @@ public class Witch {
 	}
 	
 	public void SmallFire(Witch witch) {
-		if(this.magic >= 25) {
-			witch.setLife(witch.getLife() - 40);
-			this.magic -= 25;
+		if(this.magic >= MANA_REDUCT) {
+			witch.setLife(witch.getLife() - WITCH_LOSE_HP);
+			this.magic -= MANA_REDUCT;
 			
 			if(witch.getLife() < 0) {
 				System.out.println(witch.getName() + " was killed by " + this.getName());
