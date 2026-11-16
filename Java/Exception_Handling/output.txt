@@ -1,0 +1,28 @@
+Enter withdrawal amount (0 to exit):
+300
+Withdrawal successful!
+Current balance: 700.0
+
+Enter withdrawal amount (0 to exit):
+abc
+Error: Please enter a number
+Current balance: 700.0
+
+Enter withdrawal amount (0 to exit):
+-50
+Error: Amount must be greater than 0
+Current balance: 700.0
+
+Enter withdrawal amount (0 to exit):
+50000
+Error: Insufficient funds. Current balance: 700.00
+Current balance: 700.0
+
+Enter withdrawal amount (0 to exit):
+700
+Withdrawal successful!
+Current balance: 0.0
+
+Enter withdrawal amount (0 to exit):
+0
+Thank you for using the ATM. Goodbye!
